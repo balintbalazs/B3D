@@ -1,0 +1,4 @@
+	B3D_0.0				B3D_1.0				B3D_3.0				B3D_4.0				
+filename	compression ratio	psnr	write speed	read speed	compression ratio	psnr	write speed	read speed	compression ratio	psnr	write speed	read speed	compression ratio	psnr	write speed	read speed
+U2OS_MT_AF647_2_145x163x100000-1	1.43721	1.#INF	155.815	240.259	4.7871	58.3093	313.997	381.559	8.69007	54.2794	340.258	410.242	10.849	50.4051	341.341	419.559
+U2OS_MT_AF647_2_145x163x100000-2	1.44954	1.#INF	162.981	257.497	4.84095	65.6054	301.966	391.026	8.75667	56.2116	335.998	410.392	11.2948	53.6897	340.104	425.58

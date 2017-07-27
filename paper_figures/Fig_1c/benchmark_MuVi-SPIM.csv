@@ -1,0 +1,5 @@
+	B3D_0.00				B3D_1.00				
+filename	compression ratio	psnr	write speed	read speed	compression ratio	psnr	write speed	read speed
+drosophila_D2re_BG-_masked24_768x1600x211	7.5235	1.#INF	374.789	492.986	25.6341	66.6207	299.196	461.656
+zebrafish_masked8_2048x2048x301	8.49257	1.#INF	489.901	509.816	26.7593	78.7571	414.791	604.839
+phallusia_T05_S0CL_masked_1800x1600x241	18.4218	1.#INF	504.163	623.433	44.0417	64.4763	389.668	588.228

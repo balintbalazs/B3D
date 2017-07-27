@@ -1,0 +1,3 @@
+	B3D_0.0				B3D_1.0				B3D_3.0				B3D_4.0				
+filename	compression ratio	psnr	write speed	read speed	compression ratio	psnr	write speed	read speed	compression ratio	psnr	write speed	read speed	compression ratio	psnr	write speed	read speed
+drosophila_single_384x864x100	2.12583	1.#INF	159.082	203.215	5.78049	45.9077	137.247	232.459	12.2738	36.4342	128.827	235.061	17.4033	34.1232	136.061	219.5
