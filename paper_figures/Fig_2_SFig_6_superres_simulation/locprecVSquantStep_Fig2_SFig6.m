@@ -1,13 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Simulating SMLM experiments with various SNR                         
-% Author: Balint Balazs                                                   
-% contact: balint.balazs@embl.de                                          
-% 23.06.2017                                                              
-% EMBL Heidelberg, Cell Biology and Biophysics                            
-% 
-% 
-% NPhtoons = (100,500,1000,5000,10000,50000)
-% BGPhotons = 20 for all
+% Generate Figure 2 and Supplementary Figure 6 for B³D paper              %
+% Author: Balint Balazs                                                   %
+% contact: balint.balazs@embl.de                                          %
+% 23.06.2017                                                              %
+% EMBL Heidelberg, Cell Biology and Biophysics                            %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear variables;
 %%

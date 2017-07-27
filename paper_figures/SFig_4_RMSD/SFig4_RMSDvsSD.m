@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Compare image noise level with B³D compression artifacts %
+% Compare image noise level with BÂ³D compression artifacts %
 % Author: Balint Balazs                                    %
 % contact: balint.balazs@embl.de                           %
 % 26.06.2016                                               %

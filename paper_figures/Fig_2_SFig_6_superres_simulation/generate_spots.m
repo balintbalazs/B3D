@@ -1,3 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simulate blinking fluorophores on a regular grid                        %
+% Author: Balint Balazs                                                   %
+% contact: balint.balazs@embl.de                                          %
+% 15.05.2017                                                              %
+% EMBL Heidelberg, Cell Biology and Biophysics                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %% Parameters
 spacing = 21.1; % fluorophore spacing
 gridSize = 10; % grid size

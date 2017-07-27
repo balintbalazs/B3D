@@ -1,3 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Generate Figure 1c for B³D compression paper                            %
+% Author: Balint Balazs                                                   %
+% contact: balint.balazs@embl.de                                          %
+% 27.06.2017                                                              %
+% EMBL Heidelberg, Cell Biology and Biophysics                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %% define data
 baseFolder = fileparts(matlab.desktop.editor.getActiveFilename);
 

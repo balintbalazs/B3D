@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Compare segmentation of original and B³D compressed images              %
+% Compare segmentation of original and BÂ³D compressed images              %
 % Author: Balint Balazs                                                   %
 % contact: balint.balazs@embl.de                                          %
 % 23.06.2017                                                              %

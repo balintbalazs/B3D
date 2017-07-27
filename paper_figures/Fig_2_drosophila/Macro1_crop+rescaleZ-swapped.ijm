@@ -1,3 +1,12 @@
+/*
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Prepare stacks for segmentation                                         %
+% Author: Balint Balazs                                                   %
+% contact: balint.balazs@embl.de                                          %
+% 23.06.2017                                                              %
+% EMBL Heidelberg, Cell Biology and Biophysics                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
 baseFolder = "D:\\GPU_compression\\!paper_figures\\Fig_2_drosophila\\"
 files = newArray("drosophila_1_masked24_1024x2048x211_filtered.h5")
 //datasets = newArray("B3D_1.0", "B3D_3.0","B3D_swapped_1.0", "B3D_swapped_3.0")

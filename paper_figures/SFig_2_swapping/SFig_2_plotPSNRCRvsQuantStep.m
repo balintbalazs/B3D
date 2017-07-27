@@ -1,3 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Generate Supplementary Figure 2a,b for B³D paper                        %
+% Author: Balint Balazs                                                   %
+% contact: balint.balazs@embl.de                                          %
+% 27.06.2017                                                              %
+% EMBL Heidelberg, Cell Biology and Biophysics                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 clear variables;
 %%
 baseFolder = 'D:\GPU_compression\!paper_figures\SFig_2_swapping\';

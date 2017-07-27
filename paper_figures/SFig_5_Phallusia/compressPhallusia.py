@@ -1,8 +1,13 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Feb 10 11:33:10 2017
-
-@author: Balint Balazs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Batch compression of Phallusia images for Supplementary Figure 5        %
+% for B³D paper                                                           %
+% Author: Balint Balazs                                                   %
+% contact: balint.balazs@embl.de                                          %
+% 28.06.2017                                                              %
+% EMBL Heidelberg, Cell Biology and Biophysics                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 """
 
 

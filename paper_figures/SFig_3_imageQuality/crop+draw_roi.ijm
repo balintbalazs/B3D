@@ -1,3 +1,12 @@
+/*
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Generate subfigures for Supplementary Figure 3 for B³D paper            %
+% Author: Balint Balazs                                                   %
+% contact: balint.balazs@embl.de                                          %
+% 27.06.2017                                                              %
+% EMBL Heidelberg, Cell Biology and Biophysics                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+*/
 run("Scriptable load HDF5...", "load=D:\\GPU_compression\\!paper_figures\\SFig_3_imageQuality\\drosophila_1_masked24_1024x2048x211_filtered.h5 datasetnames=/B3D_0.00 nframes=1 nchannels=1");
 rename("lossless");
 run("Duplicate...", "title=lossless-194 duplicate range=194-194");
