@@ -88,3 +88,6 @@ with 16 bit data).
 ## Usage examples
 Example scripts are located in the `sample_scripts` folder. Currently this
 includes a Python example (tested with Python 2.7.10 and 3.5.3)
+
+## Contact
+For any questions / comments about this software, please send an email to [Balint Balazs](mailto:balint.balazs@embl.de).
