@@ -19,3 +19,24 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+CUDA (r)
+
+This distribution includes CUDA(r) binary libraries under the terms of Chapter 1
+of the End User License Agreement for the NVIDIA(r) CUDA(r) Toolkit, found at
+https://git.embl.de/balazs/B3D/CUDA_EULA.pdf. Users agree to the terms of that
+license, including the following restrictions:
+
+the Redistributable SOFTWARE shall be distributed solely in binary form to
+Licensee's licensees ("Customers") only as a component of Licensee's own
+software products (each, a "Licensee Application")
+
+Licensee shall design the Licensee Application such that the Redistributable
+SOFTWARE files are installed only in a private (non-shared) directory location
+that is used only by the Licensee Application;
+
+Licensee shall obtain each Customer's written or clickwrap agreement to the
+license terms under a written, legally enforceable agreement that has the
+effect of protecting the SOFTWARE and the rights of NVIDIA under terms no less
+restrictive than this Agreement.
