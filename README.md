@@ -91,3 +91,17 @@ includes a Python example (tested with Python 2.7.10 and 3.5.3)
 
 ## Contact
 For any questions / comments about this software, please send an email to [Balint Balazs](mailto:balint.balazs@embl.de).
+
+## B³D Copyright and Software License
+B³D source code, binaries and examples are licensed under the MIT license (see
+LICENSE file) with the exception of the subfolders
+`source/src/B3D_cudaCompress/reduce` and `source/src/cudaCompress/scan`, which
+contain code adapted from CUDPP ([http://cudpp.github.io](http://cudpp.github.io)) and come with a separate license (see file
+license.txt in the subfolders).
+
+B³D also includes a modified version of cudaCompress ([https://github.com/m0bl0/cudaCompress](https://github.com/m0bl0/cudaCompress)),
+also licensed under the MIT license.
+
+The binary distribution in the `win64` folder also includes the redistributable
+CUDA runtime library, which comes with it's own license. For details see the
+LICENSE file and CUDA_EULA.pdf in that folder. 
