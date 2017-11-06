@@ -5,7 +5,11 @@ cmake_policy(VERSION 3.2.0)
 # # For MSVC and FindThreads, respectively.
 # enable_language(CXX C)
 
-project(B3D)
+project(B3D
+        VERSION 1.0.0
+        LANGUAGES CXX C)
+
+message(STATUS "Configuring B3D compression library, version ${B3D_VERSION}")
 
 find_package(CUDA REQUIRED)
 find_package(OpenMP REQUIRED)
@@ -25,15 +29,15 @@ set(CMAKE_C_STANDARD_REQUIRED 99)
 
 # Pass options to NVCC
 set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};-O3
-	-gencode arch=compute_30,code=sm_30
-	-gencode arch=compute_50,code=sm_50
-	-gencode arch=compute_52,code=sm_52
-	-gencode arch=compute_60,code=sm_60)
+  -gencode arch=compute_30,code=sm_30
+  -gencode arch=compute_50,code=sm_50
+  -gencode arch=compute_52,code=sm_52
+  -gencode arch=compute_60,code=sm_60)
 
 # Specify include directories
 include_directories(
-	include
-	src
-	)
+  include
+  src
+)
 
 add_subdirectory( src )
