@@ -1,4 +1,10 @@
-cmake_minimum_required(VERSION 2.8)
+# Minimum CMake version requirement
+cmake_minimum_required(VERSION 3.2.0)
+cmake_policy(VERSION 3.2.0)
+
+# # For MSVC and FindThreads, respectively.
+# enable_language(CXX C)
+
 project(B3D)
 
 find_package(CUDA REQUIRED)
@@ -13,18 +19,12 @@ option(BUILD_SHARED_LIBS "Build shared libararies" ON)
 # We want c++11
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-# CMake < 3.1 does not support above variables
-if (CMAKE_VERSION VERSION_LESS "3.1")
-	if ((CMAKE_CXX_COMPILER_ID MATCHES "Clang") OR (CMAKE_CXX_COMPILER_ID STREQUAL "GNU"))
-		set(CMAKE_CXX_FLAGS "-std=c++11")
-	else()
-		message(FATAL_ERROR "Cannot enable c++11, don't know how for this compilers use CMake > 3.1 or update CMakeLists.txt for your compiler.")
-	endif()
-
-endif()
+# Enable C99 support universally
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED 99)
 
 # Pass options to NVCC
-set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};-O3 -std=c++11
+set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};-O3
 	-gencode arch=compute_30,code=sm_30
 	-gencode arch=compute_50,code=sm_50
 	-gencode arch=compute_52,code=sm_52
