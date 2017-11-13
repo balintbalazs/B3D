@@ -1,13 +1,13 @@
 # Minimum CMake version requirement
-cmake_minimum_required(VERSION 3.2.0)
-cmake_policy(VERSION 3.2.0)
+cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
+cmake_policy(VERSION 3.9)
 
 # # For MSVC and FindThreads, respectively.
 # enable_language(CXX C)
 
 project(B3D
         VERSION 1.0.0
-        LANGUAGES CXX C)
+        LANGUAGES CXX CUDA)
 
 message(STATUS "Configuring B3D compression library, version ${B3D_VERSION}")
 
@@ -23,9 +23,6 @@ option(BUILD_SHARED_LIBS "Build shared libararies" ON)
 # We want c++11
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-# Enable C99 support universally
-set(CMAKE_C_STANDARD 99)
-set(CMAKE_C_STANDARD_REQUIRED 99)
 
 # Pass options to NVCC
 set(CUDA_NVCC_FLAGS ${CUDA_NVCC_FLAGS};-O3
