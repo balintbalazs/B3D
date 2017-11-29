@@ -1,11 +1,9 @@
-cuda_add_library ( cudaCompress
+add_library ( cudaCompress
 	cudaCompress/CPU/YCoCgCPU.cpp
 	cudaCompress/CPU/HuffmanCPU.cpp
 	cudaCompress/CPU/EncodeCPU.cpp
 	cudaCompress/CPU/ArithmeticCPU.cpp
 	cudaCompress/CPU/HuffmanTableCPU.cpp
-	cudaCompress/CPU/EncoderTestSuite.cpp
-	cudaCompress/CPU/tools/stb_image.c
 	cudaCompress/CPU/RBUCCPU.cpp
 	cudaCompress/CPU/GolombRiceCPU.cpp
 	cudaCompress/CPU/RunLengthCPU.cpp
@@ -36,8 +34,14 @@ cuda_add_library ( cudaCompress
   cudaCompress/B3D/B3DcompressFunctions.cpp
 )
 
+target_compile_features(cudaCompress PUBLIC cxx_std_11)
 
-cuda_add_executable ( B3D_examples
+set_target_properties( cudaCompress
+                      PROPERTIES CUDA_SEPARABLE_COMPILATION ON
+                      )
+
+
+add_executable ( B3D_examples
   examples/direct_example+benchmark.cpp
   examples/tools/rawfile.cpp
   examples/tthread/tinythread.cpp
