@@ -88,20 +88,24 @@ int main()
 	std::string base_folder("/dev/shm/");
 #endif
 	std::string files[NUM_FILES] = { 
-		"drosophila_D2re_BG-_masked24_768x1600x8"
+		//"drosophila_D2re_BG-_masked24_768x1600x8",
+		//"droso_768x1600x211_i400_16bit",
+		"phallusia_T05_S0CL_masked_1800x1600x241"
 	};
-	size_t shapes[NUM_FILES][3] = { { 8, 1600, 768 } };
-	size_t chunkshapes[NUM_FILES][3] = { { 1, 1600, 768 } };
+	//size_t shapes[NUM_FILES][3] = { { 8, 1600, 768 },{ 211, 1600, 768 } };
+	//size_t chunkshapes[NUM_FILES][3] = { { 1, 1600, 768 },{ 1, 1600, 768 } };
+	size_t shapes[NUM_FILES][3] = { { 241, 1600, 1800 } };
+	size_t chunkshapes[NUM_FILES][3] = { { 1, 1600, 1800 } };
 
 	float conversion = ORCA_FLASH4;
 
 	int numFiles = NUM_FILES;
 	
 	unsigned int filters[NUM_FILTERS] = { 1,1,1 };
-	unsigned int quant_steps[NUM_FILTERS] = { 0, 1000, 2000 };
+	unsigned int quant_steps[NUM_FILTERS] = { 2000, 1000, 0 };
 	unsigned int bgLevels[NUM_FILTERS] = { 0, 0, 0 };
-	unsigned int tiles[NUM_FILTERS] = { 64,64,64 };
-	std::string filter_names[NUM_FILTERS] = { "B3D_LL",  "B3D_1.0" , "B3D_2.0" };
+	unsigned int tiles[NUM_FILTERS] = { 48,48,48 };
+	std::string filter_names[NUM_FILTERS] = { "B3D_2.0",  "B3D_1.0" , "B3D_LL" };
 	// open benhcmark file
 	std::ofstream benchmark("benchmark.csv");
 	// write header
