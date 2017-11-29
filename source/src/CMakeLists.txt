@@ -1,4 +1,4 @@
-add_library ( cudaCompress
+add_library ( cudaCompress STATIC
 	cudaCompress/CPU/YCoCgCPU.cpp
 	cudaCompress/CPU/HuffmanCPU.cpp
 	cudaCompress/CPU/EncodeCPU.cpp
@@ -36,18 +36,18 @@ add_library ( cudaCompress
 
 target_compile_features(cudaCompress PUBLIC cxx_std_11)
 
-set_target_properties( cudaCompress
-                      PROPERTIES CUDA_SEPARABLE_COMPILATION ON
-                      )
+set_target_properties(cudaCompress
+                      PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 
 
 add_executable ( B3D_examples
-  examples/direct_example+benchmark.cpp
+  examples/direct_example+benchmark.cu
   examples/tools/rawfile.cpp
   examples/tthread/tinythread.cpp
 	)
 
-target_link_libraries ( B3D_examples cudaCompress)
+set_target_properties(B3D_examples PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
+target_link_libraries (B3D_examples PRIVATE cudaCompress)
 
 
 if (BUILD_SHARED_LIBS)
