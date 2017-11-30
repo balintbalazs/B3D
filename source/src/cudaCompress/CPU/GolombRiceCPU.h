@@ -5,6 +5,7 @@
 #include <cudaCompress/global.h>
 
 #include <vector>
+#include <climits>
 
 #include <cudaCompress/BitStream.h>
 #include <cudaCompress/EncodeCommon.h>
