@@ -3,7 +3,7 @@
 
 
 #include <cudaCompress/global.h>
-
+#include <cstring>
 
 #ifndef __CUDACC__
 #include <algorithm>
