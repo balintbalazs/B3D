@@ -89,13 +89,13 @@ int main()
 #endif
 	std::string files[NUM_FILES] = { 
 		//"drosophila_D2re_BG-_masked24_768x1600x8",
-		//"droso_768x1600x211_i400_16bit",
-		"phallusia_T05_S0CL_masked_1800x1600x241"
+		"drosophila_D2re_BG-_masked24_768x1600x211",
+		//"phallusia_T05_S0CL_masked_1800x1600x241"
 	};
-	//size_t shapes[NUM_FILES][3] = { { 8, 1600, 768 },{ 211, 1600, 768 } };
-	//size_t chunkshapes[NUM_FILES][3] = { { 1, 1600, 768 },{ 1, 1600, 768 } };
-	size_t shapes[NUM_FILES][3] = { { 241, 1600, 1800 } };
-	size_t chunkshapes[NUM_FILES][3] = { { 1, 1600, 1800 } };
+	size_t shapes[NUM_FILES][3] = { { 211, 1600, 768 } };
+	size_t chunkshapes[NUM_FILES][3] = { { 1, 1600, 768 } };
+	//size_t shapes[NUM_FILES][3] = { { 241, 1600, 1800 } };
+	//size_t chunkshapes[NUM_FILES][3] = { { 1, 1600, 1800 } };
 
 	float conversion = ORCA_FLASH4;
 
