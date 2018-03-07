@@ -1,4 +1,4 @@
-add_library ( cudaCompress STATIC
+add_library ( cudaCompress
 	cudaCompress/CPU/YCoCgCPU.cpp
 	cudaCompress/CPU/HuffmanCPU.cpp
 	cudaCompress/CPU/EncodeCPU.cpp
@@ -34,7 +34,7 @@ add_library ( cudaCompress STATIC
   cudaCompress/B3D/B3DcompressFunctions.cpp
 )
 
-target_compile_features(cudaCompress PUBLIC cxx_std_11)
+# target_compile_features(cudaCompress PUBLIC cxx_std_11)
 
 set_target_properties(cudaCompress
                       PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
@@ -60,6 +60,5 @@ if (BUILD_SHARED_LIBS)
 	target_compile_definitions(cudaCompress PUBLIC CUCOMP_BUILD_DLL)
 else()
 	target_compile_definitions(cudaCompress PUBLIC CUCOMP_BUILD_STANDALONE)
-	target_compile_definitions(cudaCompressTest PUBLIC CUCOMP_BUILD_STANDALONE)
 	target_compile_definitions(B3D_examples PUBLIC CUCOMP_BUILD_STANDALONE)
 endif()
