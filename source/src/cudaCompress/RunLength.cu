@@ -106,7 +106,7 @@ bool runLengthEncode(Instance* pInstance, Symbol** pdpSymbolsCompact, Symbol** p
 
         // run prefix sum on symbol non-zero flags to get output indices
         //TODO ballot scan!
-        scanArray<Symbol, uint, true, FunctorFlagTrue<Symbol, uint>>(dpOutputIndices, pdpSymbols[stream], pSymbolCount[stream] + 1, pInstance->m_pScanPlan, pInstance->m_stream);
+        scanArray<Symbol, uint, true, FunctorFlagTrue<Symbol, uint> >(dpOutputIndices, pdpSymbols[stream], pSymbolCount[stream] + 1, pInstance->m_pScanPlan, pInstance->m_stream);
         cudaCheckMsg("runLengthEncode: Error in scanArray");
 
         // last element of outputindices == compact symbol count, start readback

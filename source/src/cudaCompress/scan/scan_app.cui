@@ -160,7 +160,7 @@ void scanArray(TOut* d_out, const TIn* d_in, size_t numElements, const ScanPlan*
 template <typename TIn, typename TOut, bool isExclusive>
 void scanArray(TOut* d_out, const TIn* d_in, size_t numElements, const ScanPlan* plan, cudaStream_t stream = 0)
 {
-    scanArray<TIn, TOut, isExclusive, FunctorIdentity<TIn>>(d_out, d_in, numElements, plan, stream);
+    scanArray<TIn, TOut, isExclusive, FunctorIdentity<TIn> >(d_out, d_in, numElements, plan, stream);
 }
 
 // multi-row with identity functor
@@ -170,7 +170,7 @@ void scanArray(TOut* d_out, const TIn* d_in, size_t numElements, size_t numRows,
     assert(numElements <= plan->m_numElements);
     assert(numRows <= plan->m_numRows);
     assert(numRows <= 1 || rowPitch <= plan->m_rowPitches[0]);
-    scanArray<TIn, TOut, isExclusive, FunctorIdentity<TIn>>(d_out, d_in, numElements, numRows, rowPitch, plan, stream);
+    scanArray<TIn, TOut, isExclusive, FunctorIdentity<TIn> >(d_out, d_in, numElements, numRows, rowPitch, plan, stream);
 }
 
 }
