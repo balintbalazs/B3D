@@ -23,6 +23,9 @@ option(BUILD_SHARED_LIBS "Build shared libararies" ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+set(CMAKE_CUDA_STANDARD 11)
+set(CMAKE_CUDA_STANDARD_REQUIRED ON)
+
 # Pass options to NVCC
 set(CMAKE_CUDA_FLAGS "-gencode arch=compute_30,code=sm_30
                      -gencode arch=compute_50,code=sm_50
