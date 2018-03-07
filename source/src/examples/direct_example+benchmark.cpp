@@ -97,7 +97,7 @@ int main()
 
 	int numFiles = NUM_FILES;
 	
-	unsigned int filters[NUM_FILTERS] = { 101,101,101 };
+	unsigned int filters[NUM_FILTERS] = { 1,1,1 };
 	unsigned int quant_steps[NUM_FILTERS] = { 0, 1000, 2000 };
 	unsigned int bgLevels[NUM_FILTERS] = { 0, 0, 0 };
 	unsigned int tiles[NUM_FILTERS] = { 64,64,64 };
