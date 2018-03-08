@@ -52,12 +52,12 @@ target_link_libraries (B3D_examples PRIVATE cudaCompress)
 if(APPLE)
 	# We need to add the default path to the driver (libcuda.dylib) as an rpath,
 	# so that the static cuda runtime can find it at runtime.
-	set_property(TARGET particle_test PROPERTY BUILD_RPATH ${CMAKE_CUDA_IMPLICIT_LINK_DIRECTORIES})
+	set_property(TARGET B3D_examples PROPERTY BUILD_RPATH ${CMAKE_CUDA_IMPLICIT_LINK_DIRECTORIES})
 endif()
 
 
 if (BUILD_SHARED_LIBS)
-	target_compile_definitions(cudaCompress PUBLIC CUCOMP_BUILD_DLL)
+	target_compile_definitions(cudaCompress PRIVATE CUCOMP_BUILD_DLL)
 else()
 	target_compile_definitions(cudaCompress PUBLIC CUCOMP_BUILD_STANDALONE)
 	target_compile_definitions(B3D_examples PUBLIC CUCOMP_BUILD_STANDALONE)
