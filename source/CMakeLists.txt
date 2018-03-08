@@ -27,10 +27,7 @@ set(CMAKE_CUDA_STANDARD 11)
 set(CMAKE_CUDA_STANDARD_REQUIRED ON)
 
 # Pass options to NVCC
-set(CMAKE_CUDA_FLAGS "-gencode arch=compute_30,code=sm_30
-                     -gencode arch=compute_50,code=sm_50
-                     -gencode arch=compute_52,code=sm_52
-                     -gencode arch=compute_60,code=sm_60")
+set(CMAKE_CUDA_FLAGS "-gencode arch=compute_30,code=sm_30")
 
 # Specify include directories
 include_directories(
