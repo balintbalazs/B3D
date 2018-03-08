@@ -83,7 +83,8 @@ int main()
 	int repetitions = 1;
 	int return_code = 1;
 #ifdef _WIN32
-	std::string base_folder("R:\\");
+	//std::string base_folder("R:\\");
+	std::string base_folder("D:\\Documents\\data\\B3D\\benchmarking\\");
 #else
 	std::string base_folder("/dev/shm/");
 #endif
