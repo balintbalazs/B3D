@@ -36,7 +36,7 @@ set(CMAKE_CUDA_FLAGS "-gencode arch=compute_30,code=sm_30 \
 include_directories(
   include
   src
-  ${CUDA_INCLUDE_DIRS}sr
+  ${CUDA_INCLUDE_DIRS}
 )
 
 add_subdirectory( src )
