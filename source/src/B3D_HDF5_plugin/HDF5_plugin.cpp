@@ -487,7 +487,7 @@ extern "C" {
 
 
 
-	int initDirectCudaCompress(const size_t* size, int dwtLevels, float quantStep, GPUResources** res) {
+	int initDirectCudaCompress(const size_t* size, int dwtLevels, GPUResources** res) {
 		int elemCount = size[0] * size[1] * size[2];
 		//GPUResources::Config config = CompressHeightfieldResources::getRequired3DResources(size[2], size[1], size[0], dwtLevels);
 		*res = new GPUResources(size[2], size[1], size[0], dwtLevels, DEVICE);
@@ -502,7 +502,7 @@ extern "C" {
 	}
 
 	int directCudaCompress(hid_t dset_id, hsize_t* offset, size_t* size, void* data, 
-						   uint dwtLevels, float quantStep, float bgLevel, int tileSize, int onDevice, GPUResources** pRes) {
+						   uint dwtLevels, float quantStep, float bgLevel, int tileSize, float conversion, float readNoise, int onDevice, GPUResources** pRes) {
 
 		herr_t r;
 		int outDataLength;
@@ -529,7 +529,7 @@ extern "C" {
 
 		if (quantStep > 0) {
 			// start lossy compression
-			compressImage(res->m_pCuCompInstance, bitStream, dpImage, dpBuffer, dpScratch, dpSymbols, sizeX, sizeY, sizeZ, dwtLevels, quantStep, bgLevel, tileSize);
+			compressImage(res->m_pCuCompInstance, bitStream, dpImage, dpBuffer, dpScratch, dpSymbols, sizeX, sizeY, sizeZ, dwtLevels, quantStep, bgLevel, tileSize, conversion, readNoise);
 		}
 		else {
 			// start lossless compression
