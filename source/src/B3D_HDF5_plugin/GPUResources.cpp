@@ -99,11 +99,8 @@ void Resources::releaseBuffers(uint bufferCount)
 	}
 }
 
-GPUResources::GPUResources(uint sizeX, uint sizeY, uint sizeZ, uint levels, int cudaDevice)
+GPUResources::GPUResources(uint sizeX, uint sizeY, uint sizeZ, int cudaDevice)
 {
-	uint blockSizeX = sizeX / pow(2.0, (double)levels);
-	uint blockSizeY = sizeY / pow(2.0, (double)levels);
-
 	uint blockCount = 1;
 
 	uint elemCount = sizeX * sizeY * sizeZ;
@@ -163,11 +160,8 @@ void GPUResources::destroy()
 
 
 
-CPUResources::CPUResources(uint sizeX, uint sizeY, uint sizeZ, uint levels, int cudaDevice)
+CPUResources::CPUResources(uint sizeX, uint sizeY, uint sizeZ, int cudaDevice)
 {
-	uint blockSizeX = sizeX / pow(2.0, (double)levels);
-	uint blockSizeY = sizeY / pow(2.0, (double)levels);
-
 	uint blockCount = 1;
 
 	uint elemCount = sizeX * sizeY * sizeZ;
