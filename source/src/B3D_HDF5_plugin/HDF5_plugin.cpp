@@ -495,19 +495,19 @@ extern "C" {
 		return 0;
 	}
 
-	int closeDirectCudaCompress(GPUResources** res) {
-		(*res)->destroy();
-		delete *res;
+	int closeDirectCudaCompress(GPUResources* res) {
+		res->destroy();
+		delete res;
 		return 0;
 	}
 
 	int directCudaCompress(hid_t dset_id, hsize_t* offset, size_t* size, void* data, 
-						   uint dwtLevels, float quantStep, float bgLevel, int tileSize, float conversion, float readNoise, int onDevice, GPUResources** pRes) {
+						   uint dwtLevels, float quantStep, float bgLevel, int tileSize, float conversion, float readNoise, int onDevice, GPUResources* res) {
 
 		herr_t r;
 		int outDataLength;
 		cudaError status;
-		GPUResources* res = *pRes;
+		//GPUResources* res = *pRes;
 
 		uint sizeX = size[2];
 		uint sizeY = size[1];
