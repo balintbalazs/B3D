@@ -234,10 +234,10 @@ extern "C" {
 		//GPUResources::Config config = CompressHeightfieldResources::getRequired3DResources(chunkdims[2], chunkdims[1], chunkdims[0], values[1], DEVICE);
 		//pShared = new GPUResources;
 		if (useCPU) {
-			pShared = new CPUResources(chunkdims[2], chunkdims[1], chunkdims[0], values[1], DEVICE);
+			pShared = new CPUResources(chunkdims[2], chunkdims[1], chunkdims[0], DEVICE);
 		}
 		else {
-			pShared = new GPUResources(chunkdims[2], chunkdims[1], chunkdims[0], values[1], DEVICE);
+			pShared = new GPUResources(chunkdims[2], chunkdims[1], chunkdims[0], DEVICE);
 		}
 		//pShared->create(config);
 		// set B3D_INSTANCE environment variable to GPUResources pointer
@@ -313,10 +313,10 @@ extern "C" {
 			//GPUResources::Config config = CompressHeightfieldResources::getRequired3DResources(sizeX, sizeY, sizeZ, dwtLevels, DEVICE);
 			//shared->create(config);
 			if (useCPU) {
-				shared = new CPUResources(sizeX, sizeY, sizeZ, dwtLevels, DEVICE);
+				shared = new CPUResources(sizeX, sizeY, sizeZ, DEVICE);
 			}
 			else {
-				shared = new GPUResources(sizeX, sizeY, sizeZ, dwtLevels, DEVICE);
+				shared = new GPUResources(sizeX, sizeY, sizeZ, DEVICE);
 			}
 			sprintf(buffer, "B3D_INSTANCE=%p", shared);
 			putenv(buffer);
@@ -487,10 +487,10 @@ extern "C" {
 
 
 
-	int initDirectCudaCompress(const size_t* size, int dwtLevels, GPUResources** res) {
+	int initDirectCudaCompress(const size_t* size, GPUResources** res) {
 		int elemCount = size[0] * size[1] * size[2];
 		//GPUResources::Config config = CompressHeightfieldResources::getRequired3DResources(size[2], size[1], size[0], dwtLevels);
-		*res = new GPUResources(size[2], size[1], size[0], dwtLevels, DEVICE);
+		*res = new GPUResources(size[2], size[1], size[0], DEVICE);
 		//(*res)->create(config);
 		return 0;
 	}

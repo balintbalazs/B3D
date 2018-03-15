@@ -81,7 +81,7 @@ protected:
 class GPUResources : public Resources
 {
 public:
-	GPUResources(uint sizeX, uint sizeY, uint sizeZ, uint levels, int cudaDevice = -1);
+	GPUResources(uint sizeX, uint sizeY, uint sizeZ, int cudaDevice = -1);
 	bool create(const Config& config);
 	void destroy();
 
@@ -91,7 +91,7 @@ public:
 class CPUResources : public Resources
 {
 public:
-	CPUResources(uint sizeX, uint sizeY, uint sizeZ, uint levels, int cudaDevice = -1);
+	CPUResources(uint sizeX, uint sizeY, uint sizeZ, int cudaDevice = -1);
 	bool create(const Config& config);
 	void destroy();
 
