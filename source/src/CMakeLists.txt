@@ -1,4 +1,4 @@
-add_library ( cudaCompress
+add_library ( B3D_cudaCompress
 	cudaCompress/CPU/YCoCgCPU.cpp
 	cudaCompress/CPU/HuffmanCPU.cpp
 	cudaCompress/CPU/EncodeCPU.cpp
@@ -36,7 +36,7 @@ add_library ( cudaCompress
 
 # target_compile_features(cudaCompress PUBLIC cxx_std_11)
 
-set_target_properties(cudaCompress
+set_target_properties(B3D_cudaCompress
                       PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 
 
@@ -47,7 +47,7 @@ add_executable ( B3D_examples
 	)
 
 set_target_properties(B3D_examples PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
-target_link_libraries (B3D_examples PRIVATE cudaCompress)
+target_link_libraries (B3D_examples PRIVATE B3D_cudaCompress)
 
 if(APPLE)
 	# We need to add the default path to the driver (libcuda.dylib) as an rpath,
@@ -57,8 +57,8 @@ endif()
 
 
 if (BUILD_SHARED_LIBS)
-	target_compile_definitions(cudaCompress PRIVATE CUCOMP_BUILD_DLL)
+	target_compile_definitions(B3D_cudaCompress PRIVATE CUCOMP_BUILD_DLL)
 else()
-	target_compile_definitions(cudaCompress PUBLIC CUCOMP_BUILD_STANDALONE)
+	target_compile_definitions(B3D_cudaCompress PUBLIC CUCOMP_BUILD_STANDALONE)
 	target_compile_definitions(B3D_examples PUBLIC CUCOMP_BUILD_STANDALONE)
 endif()
