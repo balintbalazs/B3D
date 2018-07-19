@@ -253,11 +253,11 @@ bool encodeRLHuff(Instance* pInstance, BitStream* ppBitStreams[], bool singleBit
     std::vector<uint> symbolCountsCompact(streamCount);
     runLengthEncode(pInstance, pdpSymbolStreamsCompacted.data(), pdpZeroCounts.data(), (const Symbol**)pdpSymbolStreams, symbolCountsPerBlock.data(), streamCount, ZERO_COUNT_MAX, symbolCountsCompact.data());
 
-	Symbol* pSymbolsCompact = (Symbol*)malloc(symbolCountPerStream * sizeof(Symbol));
-	Symbol* pZeroCounts = (Symbol*)malloc(symbolCountPerStream * sizeof(Symbol));
+	// Symbol* pSymbolsCompact = (Symbol*)malloc(symbolCountPerStream * sizeof(Symbol));
+	// Symbol* pZeroCounts = (Symbol*)malloc(symbolCountPerStream * sizeof(Symbol));
 	
-	cudaMemcpy(pSymbolsCompact, pdpSymbolStreamsCompacted[0], symbolCountPerStream * sizeof(Symbol), cudaMemcpyDeviceToHost);
-	cudaMemcpy(pZeroCounts, pdpZeroCounts[0], symbolCountPerStream * sizeof(Symbol), cudaMemcpyDeviceToHost);
+	// cudaMemcpy(pSymbolsCompact, pdpSymbolStreamsCompacted[0], symbolCountPerStream * sizeof(Symbol), cudaMemcpyDeviceToHost);
+	// cudaMemcpy(pZeroCounts, pdpZeroCounts[0], symbolCountPerStream * sizeof(Symbol), cudaMemcpyDeviceToHost);
     timerLow("Huffman Encode Symbols");
 
     timerHigh("Symbols:    Design Huffman Tables");
