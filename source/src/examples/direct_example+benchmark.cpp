@@ -98,10 +98,10 @@ int main()
 	int numFiles = NUM_FILES;
 	
 	unsigned int filters[NUM_FILTERS] = { 1,1,1 };
-	unsigned int quant_steps[NUM_FILTERS] = { 0, 1000, 2000 };
+	unsigned int quant_steps[NUM_FILTERS] = { 0, 1000, 3000 };
 	unsigned int bgLevels[NUM_FILTERS] = { 0, 0, 0 };
-	unsigned int tiles[NUM_FILTERS] = { 64,64,64 };
-	std::string filter_names[NUM_FILTERS] = { "B3D_LL",  "B3D_1.0" , "B3D_2.0" };
+	unsigned int tiles[NUM_FILTERS] = { 48,48,48 };
+	std::string filter_names[NUM_FILTERS] = { "B3D_LL", "B3D_1.0",  "B3D_3.0" };
 	// open benhcmark file
 	std::ofstream benchmark("benchmark.csv");
 	// write header

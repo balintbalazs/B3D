@@ -1,3 +1,5 @@
 *.zip
 build
 .vscode
+*.h5
+!B3D_*.h5
