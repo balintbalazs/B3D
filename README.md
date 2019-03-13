@@ -19,7 +19,7 @@ latest version here: [https://support.hdfgroup.org/HDF5/release/obtain518.html](
 * CUDA capable graphics card, minimum Compute Capability 3.0
 * CUDA 8 compatible graphics driver (for GeForce products 378.66 or later)
 
-HDF5 1.10 should also be compatible, but was not tested.
+HDF5 1.10.x versions are currently **not** supported.
 
 ## Installation
 All necessary binary files can be found in the `win64` folder. In order for
@@ -84,6 +84,16 @@ with 16 bit data).
 ### Supported data types
 * Datasets of 2 or 3 dimensions
 * signed or unsigned 8 bit or 16 bit integers
+
+### Using the filter plugin with Anaconda
+Anaconda currently (version 5.0.1) ships with version 1.10.1 of the "hdf5"
+package. This is currently not supported by the plugin. In most cases running
+```
+> conda install h5py
+```
+will install the compatible packages, and will allow Anaconda users to read/write
+compressed files. If this is not the case, you should manually install version
+1.8.x (x>15) of the "hdf5" package for Anaconda.
 
 ## Usage examples
 Example scripts are located in the `sample_scripts` folder. Currently this
