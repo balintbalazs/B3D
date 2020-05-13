@@ -13,7 +13,7 @@ Corresponding publication:
 ## Requirements
 * Microsoft Windows 7 or newer, 64-bit
 * HDF5 1.8.15 64-bit or later installed. Obtain the
-latest version here: [https://support.hdfgroup.org/HDF5/release/obtain518.html](https://support.hdfgroup.org/HDF5/release/obtain518.html)
+latest version here: [https://portal.hdfgroup.org/display/support/HDF5+1.8.21](https://portal.hdfgroup.org/display/support/HDF5+1.8.21)
 * Microsoft Visual C++ 2013 Redistributable (x64) (installer included in
   `vcredist` folder)
 * CUDA capable graphics card, minimum Compute Capability 3.0
